@@ -73,4 +73,6 @@ class Fornecedor {
     }
 }
 
+const roteadorProdutos = require('./produtos/index')
+roteador.use('/:idFornecedor/produtos', roteadorProdutos)
 module.exports = Fornecedor
