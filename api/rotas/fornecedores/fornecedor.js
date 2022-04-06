@@ -74,5 +74,6 @@ class Fornecedor {
 }
 
 const roteadorProdutos = require('./produtos')
+
 roteador.use('/:idFornecedor/produtos', roteadorProdutos)
 module.exports = Fornecedor
