@@ -1,11 +1,12 @@
 const { Model } = require('sequelize/types')
 const Modelo = require('./modeloTabelaProduto')
 module.exports = {
-    listar () {
+    listar (idFornecedor) {
         return Modelo.findAll({
             where: {
                 fornecedor: idFornecedor
-            }
+            },
+            raw: true
         })
     },
     inserir (dados) {
